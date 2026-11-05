@@ -1,0 +1,18 @@
+# Streamlit settings for BURHAN'S BUDGET BUDDY.
+# Streamlit reads this file automatically when the app starts.
+# It only sets the colour theme (NFR-10: consistent look on every page)
+# and hides developer-only buttons.
+
+[theme]
+base = "light"
+primaryColor = "#0F766E"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F1F5F9"
+textColor = "#0F172A"
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# "minimal" hides the Streamlit "Deploy" button (this is a local app).
+toolbarMode = "minimal"

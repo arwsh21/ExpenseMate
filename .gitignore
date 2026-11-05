@@ -1,0 +1,25 @@
+# Python virtual environment (each computer creates its own)
+venv/
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# pytest cache
+.pytest_cache/
+.coverage
+coverage_html/
+
+# Temporary lock files (Microsoft Office / OS)
+~$*
+*.tmp
+
+# Streamlit secrets (this project does not use any, but never commit them)
+.streamlit/secrets.toml
+
+# NOTE: expensemate.db (the SQLite database) is NOT ignored on purpose,
+# so it can be included in the final submission.
+# If you upload the project to a public GitHub repository and do not want
+# to share your own data, add this line:
+# expensemate.db
