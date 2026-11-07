@@ -51,28 +51,14 @@ def get_connection():
 
 
 def initialize_database():
-    connection = None
     try:
-        connection = get_connection()
-        connection.executescript(SCHEMA_SQL)
-
-        for category_name in DEFAULT_CATEGORIES:
-            connection.execute(
-                "INSERT OR IGNORE INTO categories (name) VALUES (?)",
-                (category_name,),
-            )
-
-        connection.commit()
-    except sqlite3.Error:
+        from migrations import migrate
+        migrate.apply_migrations(DATABASE_FILE)
+    except Exception as exc:
         raise DatabaseError(
             "Unable to open or set up the database. "
             "Please close other programs that may be using it and restart the app."
-        )
-    finally:
-
-
-        if connection is not None:
-            connection.close()
+        ) from exc
 
 
 def fetch_all(sql, parameters=(), error_message=None):

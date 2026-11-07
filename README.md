@@ -54,3 +54,4 @@ pytest
 ## 🌿 Git Branch Strategy
 * `main`: Contains the stable **Assignment 01 baseline** (tagged as `v1.0-baseline`).
 * `assignment-02`: Active development branch for **Assignment 02 Software Evolution** (Migration, Refactoring, and Class Rewriting).
+

@@ -14,6 +14,7 @@ coverage_html/
 # Temporary lock files (Microsoft Office / OS)
 ~$*
 *.tmp
+*.bak_*
 
 # Streamlit secrets (this project does not use any, but never commit them)
 .streamlit/secrets.toml
